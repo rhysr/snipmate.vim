@@ -1,2 +1,12 @@
 snippet deb
     error_log(var_export(${1:var}, true));${2}
+
+# php4 class ...
+snippet 4class
+	class ${1:ClassName}
+	{
+		function $1(${2:argument})
+		{
+			${3}
+		}
+	}
