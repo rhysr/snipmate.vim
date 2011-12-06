@@ -10,3 +10,34 @@ snippet 4class
 			${3}
 		}
 	}
+
+
+# php4 gateway class ...
+snippet 4gate
+	class ${1:ClassName}
+	{
+		/**
+		 * DB Connection
+		 *
+		 * @var DB_Sql
+		 */
+		var $objDb;
+
+		/**
+		 * Author client ID
+		 *
+		 * @var int
+		 */
+		var $intClientId;
+
+
+		/**
+		 * @param DB_Sql $objDb
+		 * @param int $intClientId
+		 */
+		function $1($objDb, $intClientId)
+		{
+			$this->objDb       = $objDb;
+			$this->intClientId = $intClientId;
+		}
+	}
