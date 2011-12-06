@@ -41,3 +41,11 @@ snippet 4gate
 			$this->intClientId = $intClientId;
 		}
 	}
+
+#validate an integer
+snippet valint
+	if (!preg_match('/^[0-9]+$/', ${1:$intId}))
+	{
+		error_log('Invalid $1 \'' . $1 . '\' passed to ' . __CLASS__ . ':' . __FUNCTION__);
+		return;
+	}
